@@ -24,11 +24,11 @@
                 header('location: ../login.php');
             } else {
                 $_SESSION['error'] = 'Something wrong. Please try again.';
-                header('location: ../password_reset.php');
+                header('location: ../password-reset.php');
             }
         } else {
             $_SESSION['error'] = 'Password not match.';
             $url = urldecode("?key=$email&token=$token");
-            header("location: ../password_reset.php" . $url);
+            header("location: ../password-reset.php" . $url);
         }
     }
