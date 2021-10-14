@@ -1,6 +1,8 @@
 <?php  
     include('db_connect.php'); 
     session_start();
+
+    if (isset($_SESSION['email'])) {
 ?>
 
 <!DOCTYPE html>
@@ -33,3 +35,8 @@
     </div>
 </body>
 </html>
+<?php 
+    } else {
+		header('location: ./login.php');
+    } 
+?>
